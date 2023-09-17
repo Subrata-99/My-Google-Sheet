@@ -27,29 +27,37 @@
       <span class="material-icons"> content_paste </span>
 
       <select class="font-family-prop">
-        <option value="monoSpace">MonoSpace</option>
+        <option value="monospace">MonoSpace</option>
         <option value="sans-serif">Sans-Serif</option>
         <option value="fantasy">Fantasy</option>
         <option value="cursive">Cursive</option>
       </select>
 
       <select class="font-size-prop">
-        <option value="">8</option>
-        <option value="">10</option>
-        <option value="">12</option>
-        <option value="">14</option>
-        <option value="">16</option>
-        <option value="">18</option>
-        <option value="">20</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
+        <option value="16">16</option>
+        <option value="18">18</option>
+        <option value="20">20</option>
       </select>
 
-      <span class="material-icons"> format_bold </span>
-      <span class="material-icons"> format_italic </span>
-      <span class="material-icons"> format_underlined </span>
+      <span class="material-icons bold"> format_bold </span>
+      <span class="material-icons italic"> format_italic </span>
+      <span class="material-icons underline"> format_underlined </span>
 
-      <span class="material-icons"> format_align_left </span>
-      <span class="material-icons"> format_align_center </span>
-      <span class="material-icons"> format_align_right </span>
+      <span class="left material-icons alignment"> format_align_left </span>
+      <span class="center material-icons alignment"> format_align_center </span>
+      <span class="right material-icons alignment"> format_align_right </span>
+      <div class="color-prop">
+        <span class="material-icons"> format_color_text </span>
+        <input class="font-color-prop" type="color" />
+      </div>
+      <div class="color-prop">
+        <span class="material-icons"> format_color_fill</span>
+        <input class="bg-color-prop" type="color" />
+      </div>
     </div>
 
     <!--Formula container-->
@@ -84,6 +92,8 @@
         <div class="sheet-folder">Sheet1</div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="grid.js"></script>
+    <script src="cell-properties.js"></script>
+    <script src="formula.js"></script>
   </body>
 </html>

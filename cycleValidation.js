@@ -1,13 +1,15 @@
 //Storage -> 2D matrix
+let collectedGraphComponent = [];
 let graphComponentMatrix = [];
-for (let i = 0; i < rows; i++) {
-  let row = [];
-  for (let j = 0; j < cols; j++) {
-    //why array ? -> More than one child relation
-    row.push([]);
-  }
-  graphComponentMatrix.push(row);
-}
+
+// for (let i = 0; i < rows; i++) {
+//   let row = [];
+//   for (let j = 0; j < cols; j++) {
+//     //why array ? -> More than one child relation
+//     row.push([]);
+//   }
+//   graphComponentMatrix.push(row);
+// }
 
 /*----------------------Use to check cyclic nature of cells------------------------*/
 function isGraphCyclic(graphComponentMatrix) {

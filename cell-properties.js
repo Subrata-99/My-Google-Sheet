@@ -1,27 +1,34 @@
 /*------------------Storage--------------------*/
+let collectedSheetDB = []; // Contains all sheets db.
 let sheetDB = [];
 
-//Creating the data storage for all cell attributes as matrix format
-for (let i = 0; i < rows; i++) {
-  let sheetRow = [];
-  for (let j = 0; j < cols; j++) {
-    let cellProps = {
-      bold: false,
-      italic: false,
-      underline: false,
-      alignment: "left",
-      fontFamily: "monospace",
-      fontSize: "14",
-      fontColor: "#000000",
-      bgColor: "transparent",
-      value: "", // This property is to store whatever value we provide to each cell
-      formula: "", // This property is to store the formula that executes for individual cells
-      children: [], // This property is to store other dependent cells
-    };
-    sheetRow.push(cellProps);
-  }
-  sheetDB.push(sheetRow);
+{
+  //By default adding sheet 1
+  let addSheetBtn = document.querySelector(".sheet-add-icon");
+  addSheetBtn.click();
+  // handleSheetProperties();
 }
+// //Creating the data storage for all cell attributes as matrix format
+// for (let i = 0; i < rows; i++) {
+//   let sheetRow = [];
+//   for (let j = 0; j < cols; j++) {
+//     let cellProps = {
+//       bold: false,
+//       italic: false,
+//       underline: false,
+//       alignment: "left",
+//       fontFamily: "monospace",
+//       fontSize: "14",
+//       fontColor: "#000000",
+//       bgColor: "transparent",
+//       value: "", // This property is to store whatever value we provide to each cell
+//       formula: "", // This property is to store the formula that executes for individual cells
+//       children: [], // This property is to store other dependent cells
+//     };
+//     sheetRow.push(cellProps);
+//   }
+//   sheetDB.push(sheetRow);
+// }
 
 //Selectors fro cell properties
 let bold = document.querySelector(".bold");
@@ -228,7 +235,7 @@ function addListenerToAttachCellProperties(cell) {
     //For accessing formula for individual cells
     let formulaBar = document.querySelector(".formula-bar");
     formulaBar.value = cellProp.formula;
-    cell.value = cellProp.value;
+    cell.innerText = cellProp.value;
   });
 }
 
